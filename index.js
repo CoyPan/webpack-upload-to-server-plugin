@@ -70,15 +70,15 @@ WebpackUploadPlugin.prototype.upload = function (obj, next) {
             const { body: res } = response;
             const costTime = ((endTime - startTime) / 1000).toFixed(2);
             if (/^\[Failed\]/i.test(res)) {
-                console.log(`[用时:${costTime}s]${res}`.red);
+                console.log(`[Cost:${costTime}s]${res}`.red);
             } else if (/^\[Succeed\]/i.test(res)) {
-                console.log(`[用时:${costTime}s]${res}`.green);
+                console.log(`[Cost:${costTime}s]${res}`.green);
             } else {
                 console.log(res.yellow);
             }
             next && next();
         } else {
-            console.log(`Failed: ${file.fileName} >>>>>>>>>>>>>>>> post错误: ${error}`.red);
+            console.log(`Failed: ${file.fileName} >>>>>>>>>>>>>>>> Post Error: ${error}`.red);
         }
     });
 }
