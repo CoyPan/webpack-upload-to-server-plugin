@@ -7,7 +7,7 @@ node >= 6 <br>
 webpack >= 2 
 
 #### Install
-`npm insatll webpack-upload-to-server-plugin --save`
+`npm install webpack-upload-to-server-plugin --save`
 
 #### Usage
 - In webpack.config.js
